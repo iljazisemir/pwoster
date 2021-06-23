@@ -1,0 +1,185 @@
+.popup-update-container {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.update-popup {
+  width: 600px;
+  height: 600px;
+  border-radius: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-container-update {
+  height: 50px;
+  border-bottom: solid rgb(235, 238, 240) 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.left-top-update-container {
+  display: flex;
+  align-items: center;
+}
+
+.left-top-container-update h3 {
+  font-weight: bolder;
+}
+
+.right-top-update-container {
+  margin-right: 10px;
+}
+
+.cross-popup-update {
+  color: #34a1f2;
+  margin-right: 20px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.button-update {
+  background-color: #34a1f2;
+  color: white;
+  width: 110px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.cover-picture-update-container {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cover-picture-update {
+  object-fit: cover;
+  width: 100%;
+  filter: brightness(0.8);
+  /* margin-top: -200px; */
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cover-input {
+  margin-top: -200px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.profil-picture-container-update {
+  border: solid white 4px;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 10px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.profil-picture-update {
+  object-fit: cover;
+  width: 100%;
+  filter: brightness(0.8);
+}
+
+.picture-input {
+  opacity: 0;
+  border: solid transparent 4px;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 10px;
+  background-color: transparent;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.form-container-update {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 80px auto;
+}
+
+.input-form-update {
+  position: relative;
+  width: 580px;
+}
+
+.input-update {
+  font-size: 19px;
+  padding-top: 20px;
+  padding-left: 5px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.input-bio {
+  width: 580px;
+  height: 100px;
+  overflow: hidden;
+  font-size: 19px;
+  padding-top: 30px;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: transparent;
+  word-break: break-word;
+  resize: none;
+}
+
+.input-form-update textarea {
+  padding-top: 25px;
+  padding-left: 5px;
+  font-size: 18px;
+  width: 100%;
+}
+
+.input-effect-update ~ label {
+  position: absolute;
+  font-size: 12px;
+  left: 8px;
+  top: 5px;
+  color: #5b7083;
+  transition: 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.input-effect-update:focus ~ label {
+  color: #34a1f2;
+  transition: 0.3s;
+}

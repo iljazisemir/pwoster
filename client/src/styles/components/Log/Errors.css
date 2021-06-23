@@ -1,0 +1,7 @@
+.error,
+.pseudo,
+.password,
+.email,
+.confirmPassword {
+  color: red;
+}
