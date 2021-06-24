@@ -1,0 +1,224 @@
+.container-post {
+  border-bottom: solid rgb(235, 238, 240) 1px;
+  background-color: white;
+  transition: 0.2s;
+  padding: 10px;
+  display: grid;
+  grid-template-areas:
+    "a b . . . c"
+    ". d d d d d"
+    ". e e e . .";
+  grid-template-rows: 10px auto 18px;
+  grid-template-columns: 12% 80%;
+  overflow-wrap: break-word;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.container-post:hover {
+  background-color: rgba(244, 244, 244, 0.845);
+  transition: 0.2s;
+}
+
+.container-picture-name-post {
+  grid-area: b;
+}
+
+.profile-picture-post-container {
+  grid-area: a;
+}
+
+.profil-picture-post {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  background-color: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.info-post {
+  font-size: 15px;
+  color: gray;
+}
+
+.pseudo-tweetName-post {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 2px;
+}
+
+.pseudo-tweetName-post:hover {
+  text-decoration: underline;
+}
+
+.container-post-message {
+  grid-area: d;
+  width: 98%;
+  margin: 10px 0;
+}
+
+/* SVG POST */
+
+.three-dots-svg-container {
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: c;
+}
+
+.three-dots-svg-container:hover {
+  background-color: rgba(85, 172, 238, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.three-dots-svg {
+  width: 18px;
+  color: gray;
+}
+
+.three-dots-svg:hover {
+  color: #34a1f2;
+}
+
+.svg-post {
+  grid-area: e;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3px;
+}
+
+.svg-in-post {
+  width: 15px;
+  height: 15px;
+  color: gray;
+}
+
+.svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.svg-number-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 50px;
+}
+
+.number-whith-svg {
+  font-size: 13px;
+  color: gray;
+}
+
+/* CHAT */
+
+.svg-number-container-chat:hover .svg-container {
+  background-color: rgba(52, 161, 242, 0.105);
+  transition: 200ms;
+}
+
+.svg-number-container-chat:hover .svg-in-post {
+  color: rgba(52, 161, 242);
+}
+
+.svg-number-container-chat:hover .number-whith-svg {
+  color: rgba(52, 161, 242);
+}
+
+/* CHAT */
+
+/* RETWEET */
+
+.svg-number-container-retweet:hover .svg-container {
+  background-color: rgba(55, 191, 98, 0.105);
+  transition: 200ms;
+}
+
+.svg-number-container-retweet:hover .svg-in-post {
+  color: rgba(55, 191, 98);
+}
+
+.svg-number-container-retweet:hover .number-whith-svg {
+  color: rgba(55, 191, 98);
+}
+
+/* RETWEET */
+
+/* LIKE */
+
+.svg-number-container-like:hover .svg-container {
+  background-color: rgba(224, 37, 93, 0.105);
+  transition: 200ms;
+}
+
+.svg-number-container-like:hover .svg-in-post {
+  color: rgba(224, 37, 93);
+}
+
+.svg-number-container-like:hover .number-whith-svg {
+  color: rgba(224, 37, 93);
+}
+
+.unlike-post {
+  color: #e0255e;
+}
+
+/* LIKE */
+
+/* SVG POST */
+
+.container-picture-post {
+  width: 500px;
+  border-radius: 20px;
+  max-height: 280px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.quote-tweet-post-container {
+  border: solid rgb(210, 210, 210) 1px;
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 500px;
+}
+
+.quote-tweet-post-container:hover {
+  background-color: rgba(148, 148, 148, 0.158);
+  transition: 0.2s;
+}
+
+.quote-tweet-delete-post-container {
+  border: solid rgb(238, 238, 238) 1px;
+  border-radius: 15px;
+  margin-top: 10px;
+  width: 500px;
+  padding: 12px;
+  color: gray;
+  background-color: rgb(247, 249, 250);
+}
+
+/* 
+.window-popup {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  cursor: default;
+} */

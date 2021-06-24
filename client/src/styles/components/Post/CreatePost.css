@@ -1,0 +1,110 @@
+.container-create-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.top-container-create-post {
+  display: flex;
+}
+
+.profil-picture-create-post {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.input-create-post {
+  resize: none;
+  overflow: hidden;
+  min-height: 50px;
+  max-height: 200px;
+  width: 80%;
+  padding: auto;
+  font-size: 20px;
+  margin-left: 10px;
+  line-height: 28px;
+}
+
+.bottom-container-create-post {
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 10px 0 65px;
+}
+
+.svg-input-container:hover {
+  background-color: rgba(52, 161, 242, 0.105);
+  transition: 200ms;
+}
+
+.picture-svg {
+  width: 20px;
+  height: 20px;
+  color: #3198e6;
+  cursor: pointer;
+}
+
+.button-submit-post {
+  width: 90px;
+  padding: 10px;
+  font-size: 15px;
+  background-color: #34a1f2;
+  color: white;
+}
+
+.container-picture-create-post {
+  width: 500px;
+  border-radius: 20px;
+  max-height: 280px;
+  object-fit: cover;
+  margin: 10px 0 10px 65px;
+}
+
+.input-file-create-post {
+  opacity: 0;
+  width: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.svg-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cross-svg-post-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.557);
+  position: absolute;
+  margin-left: 70px;
+  margin-top: 15px;
+}
+
+.cross-svg-post-container:hover {
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+.cross-svg-picture-post {
+  height: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.quote-tweet-container {
+  border: solid rgb(210, 210, 210) 1px;
+  border-radius: 15px;
+  /* padding: 10px; */
+  width: 500px;
+  margin-left: 65px;
+}
