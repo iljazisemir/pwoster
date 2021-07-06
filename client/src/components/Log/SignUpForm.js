@@ -52,7 +52,7 @@ const SignUpForm = () => {
 
   return (
     <>
-      <h2>S'inscrire sur Twitter</h2>
+      <h2>S'inscrire sur Pwost</h2>
       <br />
       <form
         action=""

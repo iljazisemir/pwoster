@@ -3,16 +3,16 @@
   width: 80px;
   height: 35px;
   background-color: white;
-  border: solid #34a1f2 1px;
+  border: solid #468E49 1px;
   border-radius: 40px;
-  color: #34a1f2;
+  color: #468E49;
   font-weight: bolder;
   cursor: pointer;
   position: relative;
 }
 
 .button-follow:hover {
-  background-color: rgba(85, 172, 238, 0.1);
+  background-color: rgba(70, 142, 73, 0.1);
 }
 
 .button-unfollow {

@@ -60,7 +60,7 @@
 }
 
 .input-message:focus {
-  border: solid #34a1f2 1px;
+  border: solid #468E49 1px;
   border-radius: 40px;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .message-user {
-  background-color: #34a1f2;
+  background-color: #468E49;
   color: white;
   font-size: 15px;
   border-radius: 15px 15px 0 15px;
@@ -135,7 +135,7 @@
 }
 
 .svg-send-message {
-  color: #34a1f2;
+  color: #468E49;
   height: 25px;
   width: 25px;
   cursor: pointer;

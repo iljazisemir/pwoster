@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    /* width: 100%; */
     color: #5b7083;
     margin-top: 15px;
     height: 50px;
@@ -26,11 +26,28 @@
 }
   
 .container-h4-profil:hover {
-    color: #3198e6;
-    background-color: rgba(85, 172, 238, 0.1);
+    color: #468E49;
+    background-color: rgba(70, 142, 73, 0.1);
 }
   
 .active-container-profil {
-    color: #3198e6;
-    border-bottom: solid #3198e6 2px;
+    color: #468E49;
+    border-bottom: solid #468E49 2px;
 }
+
+@media screen and (max-width: 670px) {
+    /* .tab-container {
+        margin-left: 10px;
+    } */
+    .tab-title {
+        font-size: 14px;
+        padding: 0 5.2%;
+    }
+  }
+  
+  @media screen and (max-width: 540px) {
+    .tab-title {
+        font-size: 13px;
+        padding: 0 4.2%;
+    }
+  }

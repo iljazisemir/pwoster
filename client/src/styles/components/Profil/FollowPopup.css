@@ -11,6 +11,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(5%);
 }
 
 .follow-popup {
@@ -36,7 +37,7 @@
 
 .cross-follow-popup {
   height: 35px;
-  color: #3198e6;
+  color: #468E49;
   cursor: pointer;
   margin-right: 15px;
 }
@@ -88,4 +89,34 @@
 .bio-follow-container {
   width: 380px;
   margin: 5px 0;
+}
+
+@media screen and (max-width: 1270px) {
+  .popup-container-follow {
+    transform: translateX(15%);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .popup-container-follow {
+    transform: translateX(-5%);
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .popup-container-follow {
+    transform: translateX(-5%);
+  }
+  .follow-popup {
+    width: 480px;
+  }
+  .bio-follow-container {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .popup-container-follow {
+    transform: translateX(-5%);
+  }
 }

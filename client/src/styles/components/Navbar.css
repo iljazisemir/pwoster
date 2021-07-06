@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  height: 100%;
-  left: 20%;
+  height: 99vh;
+  transform: translateX(-185%);
+  /* left: 20%; */
 }
 
 /* .top-container {
@@ -14,8 +15,9 @@
 } */
 
 .svg-logo-twitter {
-  height: 45px;
+  height: 50px;
   padding: 3px;
+  margin-top: 5px;
 }
 
 .tab-navbar-container {
@@ -27,10 +29,14 @@
 
 .svg-logo-twitter:hover,
 .tab-navbar-container:hover {
-  background-color: rgba(85, 172, 238, 0.1);
-  color: #34a1f2;
+  background-color: rgba(70, 142, 73, 0.1);
+  color: #468E49;
   border-radius: 40px;
   cursor: pointer;
+}
+
+.add-friends {
+  display: none;
 }
 
 .svg-navbar {
@@ -40,7 +46,7 @@
 }
 
 .active-navbar {
-  color: #34a1f2;
+  color: #468E49;
 }
 
 .button-navbar {
@@ -48,12 +54,12 @@
   height: 50px;
   margin: 10px 0;
   font-size: 17px;
-  background-color: rgba(52, 161, 242);
+  background-color: rgba(70, 142, 73);
   color: white;
 }
 
 .button-navbar:hover {
-  background: rgba(52, 160, 242, 0.856);
+  background: rgba(70, 142, 73, 0.856);
 }
 
 .profil-navbar-container {
@@ -64,7 +70,7 @@
 }
 
 .profil-navbar-container:hover {
-  background-color: rgba(85, 172, 238, 0.1);
+  background-color: rgba(70, 142, 73, 0.1);
   border-radius: 40px;
 }
 
@@ -90,11 +96,49 @@
 }
 
 .svg-logout-navbar:hover {
-  color: #34a1f2;
+  color: #468E49;
 }
 
-@media screen and (max-width: 1500px) {
+/* @media screen and (max-width: 1400px) {
+  .navbar-container  {
+transform: translateX(-190%);
+  }
+} */
+
+@media screen and (max-width: 1270px) {
+  .h3-in-navbar {
+    display: none;
+  }
+  .button-navbar {
+    width: 50px;
+    font-size: 10px;
+  }
+  .left-profil-navbar-container {
+    display: none;
+  }
   .navbar-container {
-    left: 10%;
+    transform: translateX(-600%);
+  }
+  .tab-navbar-container {
+    padding: 12px 0px 12px 10px;
+    width: min-content;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .add-friends {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .navbar-container {
+    transform: translateX(-510%);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .navbar-container {
+    transform: translateX(-430%);
   }
 }

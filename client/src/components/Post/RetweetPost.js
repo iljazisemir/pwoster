@@ -52,12 +52,12 @@ const RetweetPost = ({ className, post, userPost }) => {
           {uid && retweeted === false ? (
             <button className="retweet-post" onClick={(e) => retweet(e)}>
               <RetweetSvg className="svg-edit-post" />
-              <span className="span-post">Retweeter</span>
+              <span className="span-post">Repwoster</span>
             </button>
           ) : (
             <button className="retweet-post" onClick={(e) => unretweet(e)}>
               <RetweetSvg className="svg-edit-post" />
-              <span className="span-post">Annuler le Retweet</span>
+              <span className="span-post">Annuler le Repwost</span>
             </button>
           )}
           <button

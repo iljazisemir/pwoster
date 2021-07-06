@@ -74,7 +74,7 @@
 }
 
 .three-dots-svg-container:hover {
-  background-color: rgba(85, 172, 238, 0.1);
+  background-color: rgba(70, 142, 73, 0.1);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -85,7 +85,7 @@
 }
 
 .three-dots-svg:hover {
-  color: #34a1f2;
+  color: #468E49;
 }
 
 .svg-post {
@@ -126,16 +126,16 @@
 /* CHAT */
 
 .svg-number-container-chat:hover .svg-container {
-  background-color: rgba(52, 161, 242, 0.105);
+  background-color: rgba(70, 142, 73, 0.105);
   transition: 200ms;
 }
 
 .svg-number-container-chat:hover .svg-in-post {
-  color: rgba(52, 161, 242);
+  color: rgba(70, 142, 73);
 }
 
 .svg-number-container-chat:hover .number-whith-svg {
-  color: rgba(52, 161, 242);
+  color: rgba(70, 142, 73);
 }
 
 /* CHAT */
@@ -222,3 +222,38 @@
   z-index: 1;
   cursor: default;
 } */
+
+@media screen and (max-width: 670px) {
+  .container-picture-post {
+    width: 410px;
+  }
+  .quote-tweet-post-container {
+    width: 410px;
+  }
+  .quote-tweet-delete-post-container {
+    width: 410px;
+  }
+  .container-post-message {
+    width: 95%;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .container-picture-post {
+    width: 340px;
+  }
+  .quote-tweet-post-container {
+    width: 340px;
+  }
+  .quote-tweet-delete-post-container {
+    width: 340px;
+  }
+  .container-post-message {
+    width: 95%;
+    margin-left: 15px;
+  }
+  .profil-picture-post {
+    margin-left: 0px;
+  }
+}

@@ -1,8 +1,9 @@
 .navbar-right {
   position: fixed;
-  height: 100%;
+  height: 98vh;
+  transform: translateX(140%);
   top: 0;
-  right: 14%;
+  /* left: 66%; */
   margin-top: 20px;
   margin-left: 20px;
   display: flex;
@@ -17,8 +18,14 @@
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1000px) {
   .navbar-right {
-    right: 2%;
+    transform: translateX(160%);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .navbar-right {
+    display: none;
   }
 }

@@ -122,12 +122,12 @@ const Post = ({ postId, ...props }) => {
           {!isEmpty(post.quoteTweetId) &&
             quoteTweetTest !== post.quoteTweetId && (
               <div className="quote-tweet-delete-post">
-                Ce Tweet est indisponible.
+                Ce Pwost est indisponible.
               </div>
             )}
         </div>
         <span className="date-post-status">
-          {dateParserPostLong(post.createdAt)} · Twitter Web App
+          {dateParserPostLong(post.createdAt)} · Pwost Web App
         </span>
         <div className="separator-post-status"></div>
         <div className="list-like-retweet">
@@ -136,7 +136,7 @@ const Post = ({ postId, ...props }) => {
             className="list-post-status"
             onClick={() => setRetweetListPopup(true)}
           >
-            Retweet
+            Repwost
           </span>
           <b>{!isEmpty(post.likers) ? post.likers.length : 0}</b>
           <span
@@ -152,7 +152,7 @@ const Post = ({ postId, ...props }) => {
             userFollowId={post.retweet}
             setFollowPopup={() => setRetweetListPopup(false)}
           >
-            Retweeté par
+            Repwosté par
           </FollowPopup>
         )}
         {likeListPopup && (

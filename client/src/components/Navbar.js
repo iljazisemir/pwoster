@@ -9,10 +9,9 @@ import { PopupCreatePostContext } from "../components/AppContext";
 // SVG
 import LogoTwitterSvg from "../styles/assets/svg/logoTwitterSvg";
 import HomeSvg from "../styles/assets/svg/homeSvg";
-import HashSvg from "../styles/assets/svg/hashSvg";
-import BellSvg from "../styles/assets/svg/bellSvg";
 import EnveloppeSvg from "../styles/assets/svg/enveloppeSvg";
 import PersonSvg from "../styles/assets/svg/personSvg";
+import AddFriends from '../styles/assets/svg/addFriends'
 
 const Navbar = () => {
   const userData = useSelector((state) => state.userReducer);
@@ -21,7 +20,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar-container">
+   <div className="navbar-container">
       <div>
         <NavLink exact to="/">
           <LogoTwitterSvg className="svg-logo-twitter" />
@@ -33,7 +32,7 @@ const Navbar = () => {
           className="tab-navbar-container"
         >
           <HomeSvg className="svg-navbar" />
-          <h3>Accueil</h3>
+          <h3 className="h3-in-navbar">Accueil</h3>
         </NavLink>
         <NavLink
           to="/messages"
@@ -41,7 +40,7 @@ const Navbar = () => {
           activeClassName="active-navbar"
         >
           <EnveloppeSvg className="svg-navbar" />
-          <h3>Messages</h3>
+          <h3 className="h3-in-navbar">Messages</h3>
         </NavLink>
         <NavLink
           to={"/profil/" + userData.pseudo}
@@ -49,13 +48,21 @@ const Navbar = () => {
           className="tab-navbar-container"
         >
           <PersonSvg className="svg-navbar" />
-          <h3>Profil</h3>
+          <h3 className="h3-in-navbar">Profil</h3>
+        </NavLink>
+        <NavLink
+          to="/suggestions"
+          activeClassName="active-navbar"
+          className="tab-navbar-container add-friends"
+        >
+          <AddFriends className="svg-navbar" />
+          <h3 className="h3-in-navbar">Suggestions</h3>
         </NavLink>
         <Button
           className="button-navbar"
           onClick={() => setPopupCreatePost(true)}
         >
-          Tweeter
+          Pwoster
         </Button>
       </div>
       <div className="profil-navbar-container">

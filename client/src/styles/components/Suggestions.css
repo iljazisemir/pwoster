@@ -44,7 +44,7 @@
 .see-more {
   padding: 15px 15px 0;
   font-size: 15px;
-  color: #1da1f2;
+  color: rgba(70, 142, 73);
 }
 
 .see-more:hover {
@@ -76,3 +76,4 @@
   align-items: center;
   position: absolute;
 } */
+

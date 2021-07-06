@@ -47,7 +47,7 @@ const TabTweet = ({ userData, usersData, postData, props }) => {
           }`}
           onClick={handleTabTweetsView}
         >
-          <h4>Tweets</h4>
+          <h4>Pwosts</h4>
         </div>
         <div
           id="tab-responses"
@@ -56,7 +56,7 @@ const TabTweet = ({ userData, usersData, postData, props }) => {
           }`}
           onClick={handleTabTweetsResponsesView}
         >
-          <h4 className="container-response-tweet">Tweets et réponses</h4>
+          <h4 className="container-response-tweet">Pwosts et réponses</h4>
         </div>
         <div
           id="tab-profil"

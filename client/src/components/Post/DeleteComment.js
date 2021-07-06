@@ -17,11 +17,11 @@ const DeleteComment = ({ post, comment, setDeletePopup }) => {
   return (
     <div className="delete-popup">
       <div className="container-popup-delete">
-        <h2>Supprimer le Tweet ?</h2>
+        <h2>Supprimer le Pwost ?</h2>
         <p>
           Il n'est pas possible d'annuler cette opération. Ce commentaire sera
           supprimé de votre profil, du fil des comptes qui vous suivent et des
-          résultats de recherche Twitter.{" "}
+          résultats de recherche Pwost.{" "}
         </p>
         <div>
           <Button

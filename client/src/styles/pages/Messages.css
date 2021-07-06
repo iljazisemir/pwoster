@@ -28,7 +28,7 @@
 
 .new-message-svg {
   height: 20px;
-  color: #34a1f2;
+  color: #468E49;
   cursor: pointer;
 }
 
@@ -54,8 +54,23 @@
 }
 
 .button-new-message {
-  background-color: #34a1f2;
+  background-color: #468E49;
   color: white;
   padding: 10px;
   font-size: 15px;
+}
+
+@media screen and (max-width:1050px) {
+  .left-messages-container {
+    width: 600px;
+  }
+  .right-messages-container {
+display: none;
+  } 
+}
+
+@media screen and (max-width: 670px) {
+  .left-messages-container {
+    width: 420px;
+  }
 }

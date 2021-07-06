@@ -69,9 +69,6 @@ const PostContainer = ({ post, userPost, props }) => {
         ) : (
           ""
         )}
-        {popupEditPost && (
-          <PopupEditContainer postId={post._id} post={post} props={props} />
-        )}
         <div className="container-post-message">
           <div>{post.message}</div>
           {!isEmpty(post.picture) ? (
@@ -95,7 +92,7 @@ const PostContainer = ({ post, userPost, props }) => {
           {!isEmpty(post.quoteTweetId) &&
             quoteTweetTest !== post.quoteTweetId && (
               <div className="quote-tweet-delete-post-container">
-                Ce Tweet est indisponible.
+                Ce Pwost est indisponible.
               </div>
             )}
         </div>
@@ -141,6 +138,9 @@ const PostContainer = ({ post, userPost, props }) => {
             </div>
           </div>
         </div>
+        {popupEditPost && (
+          <PopupEditContainer postId={post._id} post={post} props={props} />
+        )}
       </Link>
       {redirectProfile ? (
         <Redirect push to={"/profil/" + userPost.pseudo} />

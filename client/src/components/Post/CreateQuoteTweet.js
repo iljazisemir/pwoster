@@ -132,7 +132,7 @@ const CreateQuoteTweet = ({ quoteTweetId, setPopupQuoteTweet, popupQuoteTweet })
           className="button-submit-post"
           onClick={e => handlePostTweet(e)}
         >
-          Tweeter
+          Pwoster
         </Button>
       </div>
     </div>

@@ -19,11 +19,11 @@ const DeletePost = ({ clickToCancel, postId, props }) => {
     <>
       <div className="delete-popup">
         <div className="container-popup-delete">
-          <h2>Supprimer le Tweet ?</h2>
+          <h2>Supprimer le Pwost ?</h2>
           <p>
-            Il n'est pas possible d'annuler cette opération. Ce Tweet sera
+            Il n'est pas possible d'annuler cette opération. Ce Pwost sera
             supprimé de votre profil, du fil des comptes qui vous suivent et des
-            résultats de recherche Twitter.{" "}
+            résultats de recherche Pwost.{" "}
           </p>
           <div>
             <Button className="button-cancel-delete" onClick={clickToCancel}>

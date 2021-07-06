@@ -146,15 +146,13 @@ const ProfilContainer = ({ userData, postData }) => {
             Éditer le profil
           </Button>
         ) : (
-          <div>
-            {
+          <div className="container-msg-follow">
               <div
                 className="container-send-message-profil"
                 onClick={() => handleCreateMessage(userConnected, userData)}
               >
                 <EnveloppeSvg className="enveloppe-svp-send-profil" />
               </div>
-            }
             <ButtonFollow
               className="button-follow-profil"
               idToFollow={userData._id}
@@ -179,7 +177,7 @@ const ProfilContainer = ({ userData, postData }) => {
           <div className="date-info-container">
             <CalendarSvg className="calendar-svg" />
             <span className="date-info">
-              A rejoint Twitter en {dateParser(userData.createdAt)}
+              A rejoint Pwost en {dateParser(userData.createdAt)}
             </span>
           </div>
           <div className="sub-info-container">

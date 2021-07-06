@@ -1,5 +1,5 @@
 .popup-update-container {
-  z-index: 1;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,9 +11,11 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(5%);
 }
 
 .update-popup {
+  z-index: 1000;
   width: 600px;
   height: 600px;
   border-radius: 20px;
@@ -45,14 +47,14 @@
 }
 
 .cross-popup-update {
-  color: #34a1f2;
+  color: #468E49;
   margin-right: 20px;
   height: 35px;
   cursor: pointer;
 }
 
 .button-update {
-  background-color: #34a1f2;
+  background-color: #468E49;
   color: white;
   width: 110px;
   height: 30px;
@@ -129,7 +131,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 80px auto;
+  margin: 80px auto 0px;
 }
 
 .input-form-update {
@@ -180,6 +182,54 @@
 }
 
 .input-effect-update:focus ~ label {
-  color: #34a1f2;
+  color: #468E49;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 1270px) {
+  .popup-update-container {
+    transform: translateX(15%);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .popup-update-container {
+    transform: translateX(-5%);
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .button-update-profil {
+    margin-left: 350px;
+  }
+  .bio-info-container {
+    width: 480px;
+  }
+  .popup-update-container {
+    transform: translateX(-5%);
+  }
+  .update-popup {
+    width: 480px;
+  }
+  .input-form-update {
+    width: 450px;
+  }
+  .input-bio {
+    height: 150px;
+  }
+  .form-container-update {
+    transform: translateY(6%);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .button-update-profil {
+    margin-left: 280px;
+  }
+  .bio-info-container {
+    width: 400px;
+  }
+  .popup-update-container {
+    transform: translateX(-5%);
+  }
 }

@@ -69,7 +69,7 @@ const CreateComment = ({ postId, setCommentPopup }) => {
                 className="button-submit-post"
                 onClick={handlePostComment}
               >
-                Tweeter
+                Pwoster
               </Button>
             </div>
           </form>

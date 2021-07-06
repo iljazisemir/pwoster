@@ -37,14 +37,14 @@
 }
 
 .svg-input-container:hover {
-  background-color: rgba(52, 161, 242, 0.105);
+  background-color: rgba(70, 142, 73, 0.105);
   transition: 200ms;
 }
 
 .picture-svg {
   width: 20px;
   height: 20px;
-  color: #3198e6;
+  color: #468E49;
   cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
   width: 90px;
   padding: 10px;
   font-size: 15px;
-  background-color: #34a1f2;
+  background-color: #468E49;
   color: white;
 }
 
@@ -107,4 +107,10 @@
   /* padding: 10px; */
   width: 500px;
   margin-left: 65px;
+}
+
+@media screen and (max-width: 670px) {
+  .quote-tweet-container {
+    width: 390px;
+  }
 }

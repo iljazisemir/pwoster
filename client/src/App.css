@@ -32,22 +32,23 @@ input {
   height: 700px;
 }
 
-/* .main-page {
-  width: 60%;
-  margin: auto;
-  align-items: center;
-  background-color: green;
-} */
+.container-main-all {
+  display: flex;
+  justify-content: center;
+  transform: translateX(-5%);
+  height: 100vh;
+  max-height: 100vh;
+}
 
-/* @media screen and (max-width: 1200px) {
-  .main-page {
-    width: 70%;
+
+@media screen and (max-width: 1270px) {
+  .container-main-all {
+    transform: translateX(-15%);
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .main-page {
-    width: 80%;
+@media screen and (max-width: 1050px) {
+  .container-main-all {
+    transform: translateX(5%);
   }
-} */
-
+}

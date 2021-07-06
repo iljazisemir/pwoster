@@ -8,7 +8,6 @@ import {
 import Home from "../../pages/Home";
 import Login from "../../pages/Login";
 import Profil from "../../pages/Profil";
-import Trending from "../../pages/Trending";
 import MainContainer from "../MainContainer";
 import TrendingContainer from "../TrendingContainer";
 import Navbar from "../Navbar";
@@ -23,8 +22,8 @@ const index = () => {
       <Switch>
         <Route path="/login" exact component={Login} />
         <>
+          <div className="container-main-all" >
           <Navbar />
-          <div style={{ display: "flex", justifyContent: "center" }}>
             <MainContainer>
               <Route path="/" exact render={(props) => <Home {...props} />} />
               <Route
@@ -42,7 +41,6 @@ const index = () => {
                 )}
               />
               <Route path="/suggestions" exact component={AllSuggestions} />
-              <Route path="/trending" exact component={Trending} />
               <Route path="/messages" exact component={Messages} />
               <Route
                 path="/messages/:idMessage"
@@ -56,8 +54,8 @@ const index = () => {
               />
               <div className="page-bottom"></div>
             </MainContainer>
+            <TrendingContainer />
           </div>
-          <TrendingContainer />
         </>
         <Redirect to="/" />
       </Switch>

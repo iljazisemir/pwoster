@@ -100,3 +100,21 @@
   background-color: rgb(247, 249, 250);
   font-size: 15px;
 }
+
+@media screen and (max-width: 670px) {
+  .quote-tweet-delete-post {
+    width: 450px;
+  }
+  .quote-tweet-post {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .quote-tweet-delete-post {
+    width: 370px;
+  }
+  .quote-tweet-post {
+    width: 370px;
+  }
+}

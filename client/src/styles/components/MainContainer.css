@@ -3,10 +3,21 @@
   border-right: solid rgb(235, 238, 240) 1px;
   border-left: solid rgb(235, 238, 240) 1px;
   height: auto;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
- /* @media screen and (max-width: 800px) {
+ @media screen and (max-width: 670px) {
   .main-container {
-    width: 400px;
+    width: 500px;
   }
-} */
+}
+
+@media screen and (max-width: 540px) {
+  .main-container {
+    width: 420px;
+  }
+}
