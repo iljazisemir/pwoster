@@ -42,7 +42,6 @@
   width: 610px;
   border-top: solid rgb(235, 238, 240) 1px;
   border-right: solid rgb(235, 238, 240) 1px;
-  background-color: white;
   bottom: 0%;
   display: flex;
   align-items: center;
@@ -67,7 +66,7 @@
 .messages-right-container {
   overflow: auto;
   height: 90%;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   padding: 10px;
 }
 
@@ -143,4 +142,17 @@
 
 .button-chevron-send {
   background-color: transparent;
+}
+
+@media screen and (max-width:1050px) {
+  /* .right-messages-conversation-container {
+    display: none;
+  }  */
+  .bottom-input-conversation {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+
 }

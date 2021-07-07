@@ -5,9 +5,8 @@
   height: auto;
   overflow: scroll;
 }
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent; /* make scrollbar transparent */
+.main-container::-webkit-scrollbar {
+  display: none;
 }
 
  @media screen and (max-width: 670px) {

@@ -57,3 +57,39 @@
   background-color: rgba(244, 244, 244, 0.845);
   transition: 0.2s;
 }
+
+@media screen and (min-width: 1270px) {
+  .popup-container-create-conv {
+    transform: translateX(5%);
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .popup-container-create-conv {
+    transform: translateX(15%);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .popup-container-create-conv {
+    transform: translateX(-5%);
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .popup-update-container {
+    transform: translateX(-5%);
+  }
+  .create-conv-popup {
+    width: 450px;
+  }
+  .middle-popup-create-conv {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .popup-update-container {
+    transform: translateX(-5%);
+  }
+}

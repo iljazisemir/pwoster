@@ -25,7 +25,7 @@ const MessagesConversation = ({ conversation }) => {
         }
       });
     !isEmpty(divRef.current) && divRef.current.scrollIntoView();
-  });
+  }, [divRef, usersData]);
 
   return (
     <div className="right-messages-conversation-container">

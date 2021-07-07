@@ -9,33 +9,6 @@
   display: flex;
 }
 
-.left-messages-container {
-  height: 100%;
-  width: 380px;
-  border-right: solid rgb(235, 238, 240) 1px;
-}
-
-.top-list-conversation-container {
-  height: 60px;
-  width: 100%;
-  border-bottom: solid rgb(199, 202, 205) 1px;
-  display: flex;
-  padding: 0 20px;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.new-message-svg {
-  height: 20px;
-  color: #468E49;
-  cursor: pointer;
-}
-
-.list-conversation-container {
-  width: 100%;
-}
-
 .right-messages-container {
   height: 100%;
   width: 600px;
@@ -61,16 +34,20 @@
 }
 
 @media screen and (max-width:1050px) {
-  .left-messages-container {
-    width: 600px;
-  }
   .right-messages-container {
 display: none;
   } 
+  .page-message {
+    width: 600px;
+    border: none;
+  }
 }
 
 @media screen and (max-width: 670px) {
   .left-messages-container {
+    width: 420px;
+  }
+  .page-message {
     width: 420px;
   }
 }

@@ -32,7 +32,7 @@ const ConversationContainer = ({ conversation }) => {
       <img
         src={userRecipient.profilePicture}
         alt="profil picture"
-        className="profil-picture-post"
+        className="profil-picture-post-conversation"
       />
       <div className="name-preview-conversation-container">
         <div className="pseudo-name-conversation-container">
