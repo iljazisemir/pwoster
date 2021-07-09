@@ -68,6 +68,8 @@
   height: 90%;
   margin-bottom: 50px;
   padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .list-messages-container {

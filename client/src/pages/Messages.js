@@ -13,9 +13,9 @@ const Messages = ({idMessage, ...props}) => {
   const [openConv, setOpenConv] = useState(false)
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getMessages());
-  }, [messageData]);
+  // useEffect(() => {
+  //   dispatch(getMessages());
+  // }, [messageData]);
 
   return (
     <>

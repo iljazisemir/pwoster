@@ -2,12 +2,9 @@ import React from "react";
 
 const LogoTwitterSvg = ({ className, style }) => {
   return (
-    <xml version="1.0" standalone="no">
-{/* <!DOCTYPE svg PUBLIC "//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"> */}
-    <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1136.000000 1280.000000"
-     preserveAspectRatio="xMidYMid meet" className={className} style={style}>
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1136.000000 1280.000000"
+    preserveAspectRatio="xMidYMid meet" className={className} style={style}>
     <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
     fill="#468e49" stroke="none">
     <path d="M9460 11149 c-117 -11 -368 -52 -515 -84 -150 -32 -253 -71 -463
@@ -61,8 +58,7 @@ const LogoTwitterSvg = ({ className, style }) => {
     428 143 548 200 424 202 683 606 793 1234 30 178 43 336 37 480 -6 157 -23
     218 -83 284 -60 67 -218 145 -344 172 -113 23 -384 33 -530 18z"/>
     </g>
-    </svg>
-    </xml>
+  </svg>
   );
 };
 

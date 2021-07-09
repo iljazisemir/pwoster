@@ -15,9 +15,9 @@ const MessagesAndConversation = ({ ...props }) => {
   const [openConv, setOpenConv] = useState(true)
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getMessages());
-  }, [messageData]);
+  // useEffect(() => {
+  //   dispatch(getMessages());
+  // }, [messageData]);
 
   return (
     <>

@@ -26,8 +26,8 @@ const EditComment = ({ post, comment, setEditPopup }) => {
         />
         <input
           type="text"
-          name="message"
-          id="message"
+          name="edit-comment"
+          id="edit-comment"
           autoComplete="off"
           onChange={(e) => setMessage(e.target.value)}
           value={message}

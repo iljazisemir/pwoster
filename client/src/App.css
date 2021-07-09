@@ -37,7 +37,7 @@ input {
   justify-content: center;
   transform: translateX(-5%);
   height: 100vh;
-  max-height: 100vh;
+  /* overflow: hidden; */
 }
 
 

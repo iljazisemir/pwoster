@@ -84,8 +84,8 @@ const CreateQuoteTweet = ({ quoteTweetId, setPopupQuoteTweet, popupQuoteTweet })
         </div>
         <TextareaAutosize
           type="text"
-          name="message"
-          id="message"
+          name="quote-message"
+          id="quote-message"
           autoComplete="off"
           maxLength="280"
           onChange={(e) => setMessage(e.target.value)}

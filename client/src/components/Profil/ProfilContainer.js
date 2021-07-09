@@ -24,7 +24,7 @@ const ProfilContainer = ({ userData, postData }) => {
   const [followingPopup, setFollowingPopup] = useState(false);
   const [followersPopup, setFollowersPopup] = useState(false);
   const [messageIdRedirect, setMessageIdRedirect] = useState("");
-  const [redirect, setRedirect] = useState(false);
+  const [redirectConv, setRedirectConv] = useState(false);
   const messageData = useSelector((state) => state.messageReducer);
   const dispatch = useDispatch();
 
@@ -51,6 +51,7 @@ const ProfilContainer = ({ userData, postData }) => {
               userData._id === message.user2Id)
           ) {
             setMessageIdRedirect(message._id);
+            setRedirectConv(true)
             cptNo++;
           } else {
             user1Id = userConnected._id;
@@ -69,15 +70,14 @@ const ProfilContainer = ({ userData, postData }) => {
             (user1Id === message.user1Id || user1Id === message.user2Id) &&
             (user2Id === message.user1Id || user2Id === message.user2Id)
           ) {
-            console.log(message._id);
             newMessageId = message._id;
           }
         });
       await setMessageIdRedirect(newMessageId);
       window.location.href = "/messages/" + messageIdRedirect;
-      // setRedirect(true);
+      setRedirectConv(true);
     } else {
-      // setRedirect(true);
+      setRedirectConv(true);
     }
   };
 
@@ -220,7 +220,7 @@ const ProfilContainer = ({ userData, postData }) => {
           </div>
         </div>
       </div>
-      {redirect ? (
+      {redirectConv ? (
         <Redirect push to={"/messages/" + messageIdRedirect} />
       ) : null}
     </>

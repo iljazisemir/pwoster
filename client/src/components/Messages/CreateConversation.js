@@ -18,6 +18,7 @@ const CreateConversation = ({ setPopupCreateConv }) => {
     let user1Id = "";
     let user2Id = "";
     let cptNo = 0;
+
     !isEmpty(messageData) &&
     !isEmpty(userConnected.conversations) &&
     !isEmpty(userData.conversations)
@@ -29,6 +30,7 @@ const CreateConversation = ({ setPopupCreateConv }) => {
               userData._id === message.user2Id)
           ) {
             setMessageIdRedirect(message._id);
+            // setRedirectConv(true)
             cptNo++;
           } else {
             user1Id = userConnected._id;
@@ -51,11 +53,11 @@ const CreateConversation = ({ setPopupCreateConv }) => {
           }
         });
       await setMessageIdRedirect(newMessageId);
-      // window.location.href = "/messages/" + messageIdRedirect;
+      window.location.href = "/messages/" + messageIdRedirect;
       setPopupCreateConv(false);
-      // setRedirect(true);
+      setRedirectConv(true);
     } else {
-      // await setRedirect(true);
+      await setRedirectConv(true);
       setPopupCreateConv(false);
     }
   };
@@ -107,9 +109,9 @@ const CreateConversation = ({ setPopupCreateConv }) => {
           </div>
         </div>
       </div>
-      {redirectConv ? (
+      {redirectConv && (
         <Redirect push to={"/messages/" + messageIdRedirect} />
-      ) : null}
+      ) }
     </>
   );
 };

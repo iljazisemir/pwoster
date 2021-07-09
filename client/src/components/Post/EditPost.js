@@ -48,8 +48,8 @@ const EditPost = ({ post, clickToCancel }) => {
         />
         <input
           type="text"
-          name="message"
-          id="message"
+          name="edit-post"
+          id="edit-post"
           onChange={(e) => setMessage(e.target.value)}
           value={message}
           className="input-create-post"

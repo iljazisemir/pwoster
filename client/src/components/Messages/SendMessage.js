@@ -29,8 +29,8 @@ const SendMessage = ({ messageId, senderId }) => {
     <form className="bottom-input-conversation">
       <input
         type="text"
-        name="message"
-        id="message"
+        name="send-message"
+        id="send-message"
         autoComplete="off"
         onChange={(e) => setMessage(e.target.value)}
         value={message}

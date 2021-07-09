@@ -24,8 +24,7 @@ const MessagesConversation = ({ conversation }) => {
           setUserRecipient(user);
         }
       });
-    !isEmpty(divRef.current) && divRef.current.scrollIntoView();
-  }, [divRef, usersData]);
+  }, [conversation]);
 
   return (
     <div className="right-messages-conversation-container">
@@ -78,7 +77,6 @@ const MessagesConversation = ({ conversation }) => {
                   <div
                     className="message-friend-date-container"
                     key={index}
-                    ref={divRef}
                   >
                     <div className="message-friend-container">
                       <div className="picture-message-container">

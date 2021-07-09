@@ -54,8 +54,8 @@ const CreateComment = ({ postId, setCommentPopup }) => {
               />
               <TextareaAutosize
                 type="text"
-                name="message"
-                id="message"
+                name="comment"
+                id="comment"
                 autoComplete="off"
                 maxLength="280"
                 onChange={(e) => setMessage(e.target.value)}
