@@ -1,19 +1,40 @@
-.popup-container-edit {
-  z-index: 10;
+.popup-create-post {
+  z-index: 1000;
   display: flex;
-  width: 230px;
-  height: 100px;
-  background-color: white;
-  position: absolute;
-  /* margin-left: 310px; */
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(5%);
+}
+
+.popup-container-edit {
+  width: 350px;
+  height: min-content;
+  border-radius: 20px;
+  background: white;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
   border-radius: 4px;
   box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px,
     rgb(101 119 134 / 15%) 0px 0px 3px 1px;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
   font-size: 15px;
-  transform: translateX(260%);
+}
+
+.top-container-popup-create {
+  width: 100%;
+  height: 50px;
+  border-bottom: solid rgba(0, 0, 0, 0.164) 1px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
 .delete-post {
@@ -51,4 +72,19 @@
 
 .svg-edit-post {
   width: 16px;
+}
+
+@media screen and (max-width: 1270px) {
+  .popup-create-post {
+    transform: translateX(15%);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .popup-create-post {
+    transform: translateX(-5%);
+  }
+  .popup-create-post-container {
+    width: 480px;
+  }
 }

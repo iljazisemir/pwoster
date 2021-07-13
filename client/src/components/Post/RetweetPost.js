@@ -8,6 +8,7 @@ import { retweetPost, unretweetPost } from "../../actions/post.actions";
 import QuoteTweet from "./QuoteTweet";
 import ContainerCreatePost from "./ContainerCreatePost";
 import CreateQuoteTweet from "./CreateQuoteTweet";
+import CrossSvg from "../../styles/assets/svg/crossSvg";
 
 const RetweetPost = ({ className, post, userPost }) => {
   const [retweeted, setRetweeted] = useState(false);
@@ -48,7 +49,11 @@ const RetweetPost = ({ className, post, userPost }) => {
         }}
       />
       {popupRetweet && (
+        <div className="popup-create-post" onClick={e => e.preventDefault()}>
         <div className="popup-container-retweet">
+        <div className="top-container-popup-create">
+          <CrossSvg className="cross-popup-update" onClick={() => setPopupRetweet(false)} />
+        </div>
           {uid && retweeted === false ? (
             <button className="retweet-post" onClick={(e) => retweet(e)}>
               <RetweetSvg className="svg-edit-post" />
@@ -70,6 +75,7 @@ const RetweetPost = ({ className, post, userPost }) => {
             <PencilSvg className="svg-edit-post" />
             <span className="span-post">Citer le Tweet</span>
           </button>
+        </div>
         </div>
       )}
       {popupQuoteTweet && (

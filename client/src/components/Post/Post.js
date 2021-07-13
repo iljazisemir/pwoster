@@ -97,7 +97,7 @@ const Post = ({ postId, ...props }) => {
           )}
         </div>
         {popupEditPost && (
-          <PopupEditContainer postId={post._id} post={post} props={props} />
+          <PopupEditContainer postId={post._id} post={post} props={props} setPopupEditPost={setPopupEditPost}/>
         )}
         <div className="container-post-message">
           <div>{post.message}</div>

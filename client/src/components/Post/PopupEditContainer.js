@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CrossSvg from "../../styles/assets/svg/crossSvg";
 import GearSvg from "../../styles/assets/svg/gearSvg";
 import TrashSvg from "../../styles/assets/svg/trashSvg";
 import "../../styles/components/Post/PopupEditContainer.css";
@@ -12,7 +13,11 @@ const PopupEditContainer = ({ postId, post, props, setPopupEditPost }) => {
 
   return (
     <>
+    <div className="popup-create-post" onClick={e => e.preventDefault()}>
       <div className="popup-container-edit">
+      <div className="top-container-popup-create">
+          <CrossSvg className="cross-popup-update" onClick={() => setPopupEditPost(false)} />
+        </div>
         <button
           className="edit-post"
           onClick={(e) => {
@@ -33,6 +38,7 @@ const PopupEditContainer = ({ postId, post, props, setPopupEditPost }) => {
           <TrashSvg className="svg-edit-post" />
           <span className="span-post">Supprimer</span>
         </button>
+      </div>
       </div>
       {deletePopup && (
         <DeletePost

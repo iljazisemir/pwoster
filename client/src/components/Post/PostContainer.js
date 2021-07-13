@@ -139,7 +139,7 @@ const PostContainer = ({ post, userPost, props }) => {
           </div>
         </div>
         {popupEditPost && (
-          <PopupEditContainer postId={post._id} post={post} props={props} />
+          <PopupEditContainer postId={post._id} post={post} props={props} setPopupEditPost={setPopupEditPost}/>
         )}
       </Link>
       {redirectProfile ? (

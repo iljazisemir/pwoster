@@ -56,7 +56,7 @@ const Comments = ({ comment, post }) => {
         ) : (
           ""
         )}
-        {popupEditComment && <PopupEditComment post={post} comment={comment} />}
+        {popupEditComment && <PopupEditComment post={post} comment={comment} setPopupEditComment={setPopupEditComment}/>}
         <div className="container-post-message">
           <div>{comment.text}</div>
         </div>
