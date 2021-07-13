@@ -37,7 +37,7 @@ const SignInForm = () => {
 
   return (
     <>
-      <h2>Se connecter à Pwost</h2>
+      <h2>Se connecter à Pwoster</h2>
       <br />
       <form action="" onSubmit={handleLogin}>
         <div className="input-form">

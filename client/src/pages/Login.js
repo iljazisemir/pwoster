@@ -24,7 +24,7 @@ const Login = () => {
                 className="button-register"
                 onClick={() => setSignInForm(false)}
               >
-                S'inscrire sur Pwost
+                S'inscrire sur Pwoster
               </div>
             </>
           ) : (
@@ -34,7 +34,7 @@ const Login = () => {
                 className="button-register"
                 onClick={() => setSignInForm(true)}
               >
-                Se connecter à Pwost
+                Se connecter à Pwoster
               </div>
             </>
           )}
