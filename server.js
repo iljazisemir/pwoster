@@ -40,6 +40,6 @@ app.use("/api/message", messageRoutes);
 // server
 const PORT = process.env.PORT;
 
-app.listen(PORT || 3001, () => {
+app.listen(PORT, () => {
   console.log(`Listening on port ${process.env.PORT}`);
 });
