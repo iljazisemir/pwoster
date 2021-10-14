@@ -24,12 +24,12 @@ const UpdatePopup = ({ popupUpdate, setPopupUpdate }) => {
     const dataProfil = new FormData();
     dataProfil.append("name", userData.pseudo);
     dataProfil.append("userId", userData._id);
-    dataProfil.append("file", fileProfil);
+    dataProfil.append("fileProfil", fileProfil);
 
     const dataCover = new FormData();
     dataCover.append("name", userData.pseudo);
     dataCover.append("userId", userData._id);
-    dataCover.append("file", fileCover);
+    dataCover.append("fileCover", fileCover);
 
     dispatch(updateUser(userData._id, bio, tweetName));
     dispatch(uploadPictureProfil(dataProfil, userData._id));
@@ -73,8 +73,8 @@ const UpdatePopup = ({ popupUpdate, setPopupUpdate }) => {
         </div>
         <input
           type="file"
-          id="file"
-          name="file"
+          id="fileCover"
+          name="fileCover"
           accept=".jpg, .jpeg, .png"
           className="cover-input"
           onChange={(e) =>
@@ -93,8 +93,8 @@ const UpdatePopup = ({ popupUpdate, setPopupUpdate }) => {
         </div>
         <input
           type="file"
-          id="file"
-          name="file"
+          id="fileProfil"
+          name="fileProfil"
           accept=".jpg, .jpeg, .png"
           className="picture-input"
           onChange={(e) =>

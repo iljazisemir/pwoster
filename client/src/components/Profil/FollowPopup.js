@@ -24,6 +24,7 @@ const FollowPopup = ({
             onClick={() => setFollowPopup(false)}
           />
         </div>
+        <div className="space-responsive-mobile"></div>
         {usersData.map((user) => {
           for (let i = 0; i < userFollowId.length; i++) {
             if (user._id === userFollowId[i]) {
@@ -60,6 +61,7 @@ const FollowPopup = ({
           }
           return null;
         })}
+        <div className="space-responsive-mobile"></div>
       </div>
     </div>
   );

@@ -27,16 +27,16 @@
 }
 
 .button-new-message {
-  background-color: #468E49;
+  background-color: #468e49;
   color: white;
   padding: 10px;
   font-size: 15px;
 }
 
-@media screen and (max-width:1050px) {
+@media screen and (max-width: 1050px) {
   .right-messages-container {
-display: none;
-  } 
+    display: none;
+  }
   .page-message {
     width: 600px;
     border: none;

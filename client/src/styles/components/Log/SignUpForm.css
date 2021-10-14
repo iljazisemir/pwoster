@@ -25,7 +25,7 @@
 }
 .input-effect:focus {
   width: 100%;
-  border: 2px solid #468E49;
+  border: 2px solid #468e49;
   transition: 0.1s;
 }
 .input-effect ~ label {
@@ -38,7 +38,7 @@
   letter-spacing: 0.5px;
 }
 .input-effect:focus ~ label {
-  color: #468E49;
+  color: #468e49;
   transition: 0.3s;
 }
 
@@ -47,18 +47,27 @@
   font-weight: 700;
   width: 540px;
   padding: 15px;
-  background-color: #468E49;
+  background-color: #468e49;
   color: white;
   border-radius: 30px;
   cursor: pointer;
 }
 
 .button-register {
-  color: #468E49;
+  color: #468e49;
   font-size: 14px;
   cursor: pointer;
 }
 
 .button-register:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  .input-form {
+    width: 100%;
+  }
+  .button-submit-form {
+    width: 300px;
+  }
 }

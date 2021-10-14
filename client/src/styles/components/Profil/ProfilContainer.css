@@ -8,7 +8,7 @@
 
 .left-arrow-svg {
   height: 45px;
-  color: #468E49;
+  color: #468e49;
   cursor: pointer;
   margin: 0 15px;
   padding: 5px;
@@ -131,8 +131,8 @@
   padding: 10px;
   font-size: 15px;
   background-color: white;
-  border: solid #468E49 1px;
-  color: #468E49;
+  border: solid #468e49 1px;
+  color: #468e49;
 }
 
 .button-follow-profil {
@@ -205,7 +205,7 @@
   align-items: center;
   padding: 5px;
   border-radius: 50%;
-  border: solid 1px #468E49;
+  border: solid 1px #468e49;
   /* margin-left: 390px;
   margin-top: 12px; */
   cursor: pointer;
@@ -216,7 +216,7 @@
 .enveloppe-svp-send-profil {
   height: 20px;
   width: 20px;
-  color: #468E49;
+  color: #468e49;
 }
 
 .container-msg-follow {
@@ -268,5 +268,66 @@
   }
   .popup-container {
     transform: translateX(-5%);
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .button-update-profil {
+    margin-top: 50px;
+    height: 40px;
+    width: 100px;
+    padding: 5px;
+    font-size: 12px;
+  }
+  .button-follow-profil {
+    height: 40px;
+    width: 80px;
+    font-size: 12px;
+  }
+  .container-msg-follow {
+    width: 140px;
+    margin-top: 50px;
+    transform: translateX(140%);
+  }
+  .container-send-message-profil {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+  }
+  .bio-info-container {
+    width: 100%;
+  }
+  .profil-info {
+    padding: 0px 15px 0;
+  }
+  .popup-container {
+    transform: translateX(0%);
+  }
+  .cover-picture-popup {
+    width: 300px;
+    height: 200px;
+  }
+  .profile-picture-container {
+    height: 100px;
+    width: 100px;
+    transform: translateY(-50px);
+  }
+  .cover-picture-container {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .button-update-profil {
+    transform: translateX(-65%);
+  }
+  .container-msg-follow {
+    transform: translateX(100%);
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .container-msg-follow {
+    transform: translateX(80%);
   }
 }

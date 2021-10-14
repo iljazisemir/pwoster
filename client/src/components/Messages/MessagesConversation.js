@@ -74,10 +74,7 @@ const MessagesConversation = ({ conversation }) => {
                 );
               } else if (message.senderId === userRecipient._id) {
                 return (
-                  <div
-                    className="message-friend-date-container"
-                    key={index}
-                  >
+                  <div className="message-friend-date-container" key={index}>
                     <div className="message-friend-container">
                       <div className="picture-message-container">
                         <Link to={"/profil/" + userRecipient.pseudo}>
@@ -100,8 +97,8 @@ const MessagesConversation = ({ conversation }) => {
               }
             })}
         </div>
+        <SendMessage messageId={conversation._id} senderId={userData._id} />
       </div>
-      <SendMessage messageId={conversation._id} senderId={userData._id} />
     </div>
   );
 };

@@ -9,7 +9,7 @@
   display: none;
 }
 
- @media screen and (max-width: 670px) {
+@media screen and (max-width: 670px) {
   .main-container {
     width: 500px;
   }
@@ -18,5 +18,11 @@
 @media screen and (max-width: 540px) {
   .main-container {
     width: 420px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .main-container {
+    width: 100%;
   }
 }

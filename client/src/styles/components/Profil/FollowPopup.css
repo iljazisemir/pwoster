@@ -37,7 +37,7 @@
 
 .cross-follow-popup {
   height: 35px;
-  color: #468E49;
+  color: #468e49;
   cursor: pointer;
   margin-right: 15px;
 }
@@ -118,5 +118,29 @@
 @media screen and (max-width: 540px) {
   .popup-container-follow {
     transform: translateX(-5%);
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .popup-container-follow {
+    transform: translateX(0%);
+  }
+  .top-popup-follow {
+    top: 0%;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 200;
+  }
+  .space-responsive-mobile {
+    height: 50px;
+  }
+  .follow-popup {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
+  .bio-follow-container {
+    display: none;
   }
 }

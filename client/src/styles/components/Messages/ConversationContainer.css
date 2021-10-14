@@ -48,7 +48,7 @@
   font-size: 14px;
   color: rgb(109, 109, 109);
 }
-@media screen and (max-width:1050px) {
+@media screen and (max-width: 1050px) {
   .preview-message {
     display: none;
   }
@@ -86,10 +86,8 @@
     flex-direction: column;
   }
   .tweetName {
-
   }
   .info-post {
-    
   }
 }
 

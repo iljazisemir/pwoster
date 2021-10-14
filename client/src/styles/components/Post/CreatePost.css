@@ -44,7 +44,7 @@
 .picture-svg {
   width: 20px;
   height: 20px;
-  color: #468E49;
+  color: #468e49;
   cursor: pointer;
 }
 
@@ -52,7 +52,7 @@
   width: 90px;
   padding: 10px;
   font-size: 15px;
-  background-color: #468E49;
+  background-color: #468e49;
   color: white;
 }
 
@@ -112,5 +112,17 @@
 @media screen and (max-width: 670px) {
   .quote-tweet-container {
     width: 390px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .quote-tweet-container {
+    width: 80%;
+  }
+  .preview-picture-container {
+    width: 80%;
+  }
+  .container-picture-create-post {
+    width: 100%;
   }
 }

@@ -17,10 +17,10 @@ const EditPost = ({ post, clickToCancel }) => {
   const error = useSelector((state) => state.errorReducer.postError);
   const dispatch = useDispatch();
 
-  // const handlePicture = (e) => {
-  //   setPostPicture(URL.createObjectURL(e.target.files[0]));
-  //   setFile(e.target.files[0]);
-  // };
+  const handlePicture = (e) => {
+    setPostPicture(URL.createObjectURL(e.target.files[0]));
+    setFile(e.target.files[0]);
+  };
 
   const handleDeletePicture = () => {
     setPostPicture("");
@@ -29,52 +29,55 @@ const EditPost = ({ post, clickToCancel }) => {
 
   const handleEditTweet = () => {
     dispatch(editPost(post._id, message, file));
-    clickToCancel(false)
+    clickToCancel(false);
   };
 
   return (
-    <div className="popup-create-post" onClick={e => e.preventDefault()}>
-    <div className="popup-create-post-container">
-      <div className="top-container-popup-create">
-        <CrossSvg className="cross-popup-update" onClick={() => clickToCancel(false)} />
-      </div>
-      <div className="main-create-post-container">
-    <form className="container-create-post" >
-      <div className="top-container-create-post">
-        <img
-          src={userData.profilePicture}
-          alt="picture"
-          className="profil-picture-create-post"
-        />
-        <input
-          type="text"
-          name="edit-post"
-          id="edit-post"
-          onChange={(e) => setMessage(e.target.value)}
-          value={message}
-          className="input-create-post"
-          placeholder="Quoi de neuf ?"
-        />
-      </div>
-      {!isEmpty(postPicture) ? (
-        <div className="preview-picture-container">
-          {/* <div className="cross-svg-post-container">
-            <CrossSvg
-              className="cross-svg-picture-post"
-              onClick={handleDeletePicture}
-            />
-          </div> */}
-          <img
-            src={postPicture}
-            alt="Photo"
-            className="container-picture-create-post"
+    <div className="popup-create-post" onClick={(e) => e.preventDefault()}>
+      <div className="popup-create-post-container">
+        <div className="top-container-popup-create">
+          <CrossSvg
+            className="cross-popup-update"
+            onClick={() => clickToCancel(false)}
           />
         </div>
-      ) : (
-        ""
-      )}
-      <div className="bottom-container-create-post">
-        {/* <div className="svg-input-container">
+        <div className="main-create-post-container">
+          <form className="container-create-post">
+            <div className="top-container-create-post">
+              <img
+                src={userData.profilePicture}
+                alt="picture"
+                className="profil-picture-create-post"
+              />
+              <input
+                type="text"
+                name="edit-post"
+                id="edit-post"
+                onChange={(e) => setMessage(e.target.value)}
+                value={message}
+                className="input-create-post"
+                placeholder="Quoi de neuf ?"
+              />
+            </div>
+            {!isEmpty(postPicture) ? (
+              <div className="preview-picture-container">
+                <div className="cross-svg-post-container">
+                  <CrossSvg
+                    className="cross-svg-picture-post"
+                    onClick={handleDeletePicture}
+                  />
+                </div>
+                <img
+                  src={postPicture}
+                  alt="Photo"
+                  className="container-picture-create-post"
+                />
+              </div>
+            ) : (
+              ""
+            )}
+            <div className="bottom-container-create-post">
+              {/* <div className="svg-input-container">
           <ImageSvg className="picture-svg" />
           <input
             type="file"
@@ -86,15 +89,12 @@ const EditPost = ({ post, clickToCancel }) => {
             className="input-file-create-post"
           />
         </div> */}
-        <Button
-          className="button-submit-post"
-          onClick={handleEditTweet}
-        >
-          Modifier
-        </Button>
-      </div>
-    </form>
-    </div>
+              <Button className="button-submit-post" onClick={handleEditTweet}>
+                Modifier
+              </Button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

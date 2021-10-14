@@ -11,6 +11,7 @@ import Profil from "../../pages/Profil";
 import MainContainer from "../MainContainer";
 import TrendingContainer from "../TrendingContainer";
 import Navbar from "../Navbar";
+import NavbarMobile from "../NavbarMobile";
 import Post from "../Post/Post";
 import AllSuggestions from "../AllSuggestions";
 import Messages from "../../pages/Messages";
@@ -22,8 +23,8 @@ const index = () => {
       <Switch>
         <Route path="/login" exact component={Login} />
         <>
-          <div className="container-main-all" >
-          <Navbar />
+          <div className="container-main-all">
+            <Navbar />
             <MainContainer>
               <Route path="/" exact render={(props) => <Home {...props} />} />
               <Route
@@ -52,6 +53,7 @@ const index = () => {
                   />
                 )}
               />
+              <NavbarMobile />
               <div className="page-bottom"></div>
             </MainContainer>
             <TrendingContainer />

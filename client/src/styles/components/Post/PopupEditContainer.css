@@ -56,7 +56,7 @@
 .edit-post {
   width: 100%;
   height: 50%;
-  color: #468E49;
+  color: #468e49;
   background-color: white;
   font-size: 15px;
   cursor: pointer;
@@ -86,5 +86,11 @@
   }
   .popup-create-post-container {
     width: 480px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .popup-create-post {
+    transform: translateX(0%);
   }
 }

@@ -47,14 +47,14 @@
 }
 
 .cross-popup-update {
-  color: #468E49;
+  color: #468e49;
   margin-right: 20px;
   height: 35px;
   cursor: pointer;
 }
 
 .button-update {
-  background-color: #468E49;
+  background-color: #468e49;
   color: white;
   width: 110px;
   height: 30px;
@@ -182,7 +182,7 @@
 }
 
 .input-effect-update:focus ~ label {
-  color: #468E49;
+  color: #468e49;
   transition: 0.3s;
 }
 
@@ -231,5 +231,26 @@
   }
   .popup-update-container {
     transform: translateX(-5%);
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .popup-update-container {
+    transform: translateX(0%);
+  }
+  .update-popup {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    transform: translateX(5%);
+  }
+  .cover-picture-update-container {
+    width: 100%;
+  }
+  .input-form-update {
+    width: 100%;
+  }
+  .form-container-update {
+    width: 100%;
   }
 }

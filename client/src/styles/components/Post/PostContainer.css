@@ -85,7 +85,7 @@
 }
 
 .three-dots-svg:hover {
-  color: #468E49;
+  color: #468e49;
 }
 
 .svg-post {
@@ -255,5 +255,34 @@
   }
   .profil-picture-post {
     margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .container-picture-post {
+    width: 95%;
+    max-height: 200px;
+  }
+  .quote-tweet-post-container {
+    width: 95%;
+  }
+  .quote-tweet-delete-post-container {
+    width: 95%;
+  }
+  .container-post-message {
+    width: 95%;
+    margin-left: 15px;
+  }
+  .pseudo-tweetName-post {
+    margin-left: 15px;
+  }
+  .container-post-message {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container-picture-post {
+    max-height: 150px;
   }
 }

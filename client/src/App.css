@@ -40,7 +40,6 @@ input {
   /* overflow: hidden; */
 }
 
-
 @media screen and (max-width: 1270px) {
   .container-main-all {
     transform: translateX(-15%);
@@ -50,5 +49,11 @@ input {
 @media screen and (max-width: 1050px) {
   .container-main-all {
     transform: translateX(5%);
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .container-main-all {
+    transform: translateX(0%);
   }
 }

@@ -51,7 +51,7 @@ const ProfilContainer = ({ userData, postData }) => {
               userData._id === message.user2Id)
           ) {
             setMessageIdRedirect(message._id);
-            setRedirectConv(true)
+            setRedirectConv(true);
             cptNo++;
           } else {
             user1Id = userConnected._id;
@@ -147,12 +147,12 @@ const ProfilContainer = ({ userData, postData }) => {
           </Button>
         ) : (
           <div className="container-msg-follow">
-              <div
-                className="container-send-message-profil"
-                onClick={() => handleCreateMessage(userConnected, userData)}
-              >
-                <EnveloppeSvg className="enveloppe-svp-send-profil" />
-              </div>
+            <div
+              className="container-send-message-profil"
+              onClick={() => handleCreateMessage(userConnected, userData)}
+            >
+              <EnveloppeSvg className="enveloppe-svp-send-profil" />
+            </div>
             <ButtonFollow
               className="button-follow-profil"
               idToFollow={userData._id}

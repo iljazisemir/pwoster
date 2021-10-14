@@ -1,53 +1,60 @@
 .tab-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
-    /* width: 100%; */
-    color: #5b7083;
-    margin-top: 15px;
-    height: 50px;
-    border-bottom: solid rgb(235, 238, 240) 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  /* width: 100%; */
+  color: #5b7083;
+  margin-top: 15px;
+  height: 50px;
+  border-bottom: solid rgb(235, 238, 240) 1px;
 }
 
 .tab-container h4 {
-    width: max-content;
-    text-align: center;
+  width: max-content;
+  text-align: center;
 }
-  
+
 .tab-title {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    padding: 0 6.2%;
-    font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0 6.2%;
+  font-size: 15px;
 }
-  
+
 .container-h4-profil:hover {
-    color: #468E49;
-    background-color: rgba(70, 142, 73, 0.1);
+  color: #468e49;
+  background-color: rgba(70, 142, 73, 0.1);
 }
-  
+
 .active-container-profil {
-    color: #468E49;
-    border-bottom: solid #468E49 2px;
+  color: #468e49;
+  border-bottom: solid #468e49 2px;
 }
 
 @media screen and (max-width: 670px) {
-    /* .tab-container {
+  /* .tab-container {
         margin-left: 10px;
     } */
-    .tab-title {
-        font-size: 14px;
-        padding: 0 5.2%;
-    }
+  .tab-title {
+    font-size: 14px;
+    padding: 0 5.2%;
   }
-  
-  @media screen and (max-width: 540px) {
-    .tab-title {
-        font-size: 13px;
-        padding: 0 4.2%;
-    }
+}
+
+@media screen and (max-width: 540px) {
+  .tab-title {
+    font-size: 13px;
+    padding: 0 4.2%;
   }
+}
+
+@media screen and (max-width: 485px) {
+  .tab-title {
+    font-size: 13px;
+    padding: 0 2.2%;
+  }
+}
