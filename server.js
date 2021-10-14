@@ -44,5 +44,5 @@ app.listen(PORT || 3001, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
-var distDir = __dirname + "/dist/";
-app.use(express.static(distDir));
+// var distDir = __dirname + "/dist/";
+// app.use(express.static(distDir));
