@@ -2,8 +2,9 @@ const router = require("express").Router();
 const authController = require("../controllers/auth.controller");
 const userController = require("../controllers/user.controller");
 const uploadController = require("../controllers/upload.controller");
-const multer = require("multer"); // npm i -s multer || npm i multer@2.0.0-rc.1
-const upload = multer();
+const multer = require("multer");
+const uploadProfil = multer({ dest: "client/public/uploads/profil/" });
+const uploadCover = multer({ dest: "client/public/uploads/cover/" });
 
 // auth
 router.post("/register", authController.signUp);
@@ -18,15 +19,15 @@ router.delete("/:id", userController.deleteUser);
 router.patch("/follow/:id", userController.follow);
 router.patch("/unfollow/:id", userController.unfollow);
 
-// upload
 router.post(
   "/uploadProfil",
-  upload.single("file"),
+  uploadProfil.single("fileProfil"),
   uploadController.uploadProfil
 );
+
 router.post(
   "/uploadCover",
-  upload.single("file"),
+  uploadCover.single("fileCover"),
   uploadController.uploadCover
 );
 

@@ -33,16 +33,16 @@ app.get("/jwtid", requireAuth, (req, res) => {
 });
 
 // routes
-app.use("/user", userRoutes);
+app.use("/api/user", userRoutes);
 app.use("/api/post", postRoutes);
 app.use("/api/message", messageRoutes);
 
 // server
 const PORT = process.env.PORT;
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${process.env.PORT}`);
+app.listen(PORT || 3001, () => {
+  console.log(`Listening on port ${PORT}`);
 });
 
-var distDir = __dirname + "/dist/";
- app.use(express.static(distDir));
+// var distDir = __dirname + "/dist/";
+//  app.use(express.static(distDir));

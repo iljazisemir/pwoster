@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const postController = require("../controllers/post.controller");
-const multer = require("multer"); // npm i -s multer || npm i multer@2.0.0-rc.1
-const upload = multer();
+const multer = require("multer");
+const uploadPost = multer({ dest: "client/public/uploads/posts/" });
 
 // post
 router.get("/", postController.readPost);
-router.post("/", upload.single("file"), postController.createPost);
-router.put("/:id", postController.updatePost);
+router.post("/", uploadPost.single("file"), postController.createPost);
+router.put("/:id", uploadPost.single("file"), postController.updatePost);
 router.delete("/:id", postController.deletePost);
 router.patch("/like/:id", postController.likePost);
 router.patch("/unlike/:id", postController.unlikePost);

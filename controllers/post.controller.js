@@ -5,6 +5,10 @@ const { uploadErrors } = require("../utils.js/errors.utils");
 const fs = require("fs");
 const { promisify } = require("util");
 const pipeline = promisify(require("stream").pipeline);
+require("dotenv").config({ path: "../config/.env" }); // Cacher données
+const util = require("util");
+const unlinkFile = util.promisify(fs.unlink);
+const { uploadFile } = require("../s3");
 
 module.exports.readPost = (req, res) => {
   PostModel.find((err, docs) => {
@@ -14,37 +18,14 @@ module.exports.readPost = (req, res) => {
 };
 
 module.exports.createPost = async (req, res) => {
-  let fileName;
-
-  if (req.file !== null) {
-    try {
-      if (
-        req.file.detectedMimeType !== "image/jpg" &&
-        req.file.detectedMimeType !== "image/png" &&
-        req.file.detectedMimeType !== "image/jpeg"
-      )
-        throw Error("invalid file");
-
-      if (req.file.size > 500000) throw Error("max size");
-    } catch (err) {
-      const errors = uploadErrors(err);
-      return res.status(201).json({ errors });
-    }
-
-    fileName = req.body.posterId + Date.now() + ".jpg";
-
-    await pipeline(
-      req.file.stream,
-      fs.createWriteStream(
-        `${__dirname}/../client/public/uploads/posts/${fileName}`
-      )
-    );
-  }
+  const file = req.file;
+  const fileResult = await uploadFile(file);
+  await unlinkFile(file.path);
 
   const newPost = new PostModel({
     posterId: req.body.posterId,
     message: req.body.message,
-    picture: req.file !== null ? "../uploads/posts/" + fileName : "",
+    picture: req.file !== null ? fileResult.Location : "",
     video: req.body.video,
     likers: [],
     comments: [],
@@ -60,30 +41,9 @@ module.exports.createPost = async (req, res) => {
 };
 
 module.exports.updatePost = async (req, res) => {
-  // if (req.file !== null) {
-  //   try {
-  //     if (
-  //       req.file.detectedMimeType !== "image/jpg" &&
-  //       req.file.detectedMimeType !== "image/png" &&
-  //       req.file.detectedMimeType !== "image/jpeg"
-  //     )
-  //       throw Error("invalid file");
-
-  //     if (req.file.size > 500000) throw Error("max size");
-  //   } catch (err) {
-  //     const errors = uploadErrors(err);
-  //     return res.status(201).json({ errors });
-  //   }
-
-  //   const fileName = req.body.posterId + Date.now() + ".jpg";
-
-  //   await pipeline(
-  //     req.file.stream,
-  //     fs.createWriteStream(
-  //       `${__dirname}/../client/public/uploads/posts/${fileName}`
-  //     )
-  //   );
-  // }
+  const file = req.file;
+  const fileResult = await uploadFile(file);
+  await unlinkFile(file.path);
 
   try {
     await PostModel.findByIdAndUpdate(
@@ -91,7 +51,7 @@ module.exports.updatePost = async (req, res) => {
       {
         $set: {
           message: req.body.message,
-          // picture: "./uploads/posts/" + fileName,
+          picture: fileResult.Location,
         },
       },
       { new: true, upsert: true, setDefaultsOnInsert: true },
