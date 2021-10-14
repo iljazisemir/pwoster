@@ -1,7 +1,15 @@
+.navbar-mobile-container {
+  display: none;
+}
+
+.button-navbar-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 485px) {
   .navbar-mobile-container {
     z-index: 1000;
-    height: 50px;
+    height: 70px;
     width: 100%;
     padding: 0 2px;
     border-top: solid rgb(235, 238, 240) 1px;
@@ -16,7 +24,7 @@
 
   .button-navbar-mobile {
     position: fixed;
-    bottom: 8%;
+    bottom: 10%;
     right: 4%;
     color: white;
     background-color: #468e49;
