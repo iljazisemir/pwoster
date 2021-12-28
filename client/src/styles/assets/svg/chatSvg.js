@@ -6,7 +6,7 @@ const ChatSvg = ({ className, style, onClick }) => {
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       style={style}
-      className={`bi bi-chat ${className}`}
+      className={`bi bi-conversation ${className}`}
       onClick={onClick}
       viewBox="0 0 16 16"
     >

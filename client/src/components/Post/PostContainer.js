@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { dateParserPost, isEmpty } from "../Utils";
 import { Link } from "react-router-dom";
 import LikePost from "./LikePost";
-import RetweetPost from "./RetweetPost";
+import RepwostPost from "./RepwostPost";
 import PopupEditContainer from "./PopupEditContainer";
 import { Redirect } from "react-router";
 
@@ -34,9 +34,12 @@ const PostContainer = ({ post, userPost, props }) => {
 
   return (
     <>
-      <Link to={"/status/" + post._id} className="container-post" >
+      <Link to={"/status/" + post._id} className="container-post">
         <div
-          onClick={(e) => {setRedirectProfile(true); e.preventDefault()}}
+          onClick={(e) => {
+            setRedirectProfile(true);
+            e.preventDefault();
+          }}
           className="profile-picture-post-container"
         >
           <img
@@ -47,7 +50,10 @@ const PostContainer = ({ post, userPost, props }) => {
         </div>
         <div className="container-picture-name-post">
           <span
-            onClick={(e) => {setRedirectProfile(true); e.preventDefault()}}
+            onClick={(e) => {
+              setRedirectProfile(true);
+              e.preventDefault();
+            }}
             className="pseudo-tweetName-post"
           >
             {userPost.tweetName}{" "}
@@ -83,7 +89,13 @@ const PostContainer = ({ post, userPost, props }) => {
             ""
           )}
           {!isEmpty(post.quoteTweetId) && quoteTweetTest === post.quoteTweetId && (
-            <div onClick={(e) => {setRedirectQuoteTweet(true); e.preventDefault()}} key={post.quoteTweetId} >
+            <div
+              onClick={(e) => {
+                setRedirectQuoteTweet(true);
+                e.preventDefault();
+              }}
+              key={post.quoteTweetId}
+            >
               <div className="quote-tweet-post-container">
                 <QuoteTweet quoteTweetId={post.quoteTweetId} />
               </div>
@@ -97,7 +109,7 @@ const PostContainer = ({ post, userPost, props }) => {
             )}
         </div>
         <div className="svg-post">
-          <div className="svg-number-container svg-number-container-chat">
+          <div className="svg-number-container svg-number-container-conversation">
             <div className="svg-container">
               <ChatSvg
                 className="svg-in-post"
@@ -119,7 +131,7 @@ const PostContainer = ({ post, userPost, props }) => {
           </div>
           <div className="svg-number-container svg-number-container-retweet">
             <div className="svg-container">
-              <RetweetPost
+              <RepwostPost
                 className="svg-in-post"
                 post={post}
                 userPost={userPost}
@@ -139,7 +151,12 @@ const PostContainer = ({ post, userPost, props }) => {
           </div>
         </div>
         {popupEditPost && (
-          <PopupEditContainer postId={post._id} post={post} props={props} setPopupEditPost={setPopupEditPost}/>
+          <PopupEditContainer
+            postId={post._id}
+            post={post}
+            props={props}
+            setPopupEditPost={setPopupEditPost}
+          />
         )}
       </Link>
       {redirectProfile ? (
@@ -148,7 +165,7 @@ const PostContainer = ({ post, userPost, props }) => {
       {redirectQuoteTweet ? (
         <Redirect push to={"/status/" + post.quoteTweetId} />
       ) : null}
-      </>
+    </>
   );
 };
 

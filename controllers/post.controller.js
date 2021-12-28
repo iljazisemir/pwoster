@@ -147,7 +147,7 @@ module.exports.unlikePost = async (req, res) => {
   }
 };
 
-module.exports.retweetPost = async (req, res) => {
+module.exports.repwostPost = async (req, res) => {
   if (!ObjectID.isValid(req.params.id))
     return res.status(400).send("ID unknow : " + req.params.id);
 
@@ -183,7 +183,7 @@ module.exports.retweetPost = async (req, res) => {
   }
 };
 
-module.exports.unretweetPost = async (req, res) => {
+module.exports.unrepwostPost = async (req, res) => {
   if (!ObjectID.isValid(req.params.id))
     return res.status(400).send("ID unknow : " + req.params.id);
 

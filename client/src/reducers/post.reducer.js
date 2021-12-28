@@ -7,9 +7,9 @@ import {
   EDIT_POST,
   GET_POSTS,
   LIKE_POST,
-  RETWEET_POST,
+  REPWOST_POST,
   UNLIKE_POST,
-  UNRETWEET_POST,
+  UNREPWOST_POST,
 } from "../actions/post.actions";
 
 const initialState = {};
@@ -38,7 +38,7 @@ export default function postReducer(state = initialState, action) {
         }
         return post;
       });
-    case RETWEET_POST:
+    case REPWOST_POST:
       return state.map((post) => {
         if (post._id === action.payload.postId) {
           return {
@@ -48,7 +48,7 @@ export default function postReducer(state = initialState, action) {
         }
         return post;
       });
-    case UNRETWEET_POST:
+    case UNREPWOST_POST:
       return state.map((post) => {
         if (post._id === action.payload.postId) {
           return {

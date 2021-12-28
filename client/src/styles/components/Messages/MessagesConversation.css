@@ -75,7 +75,6 @@
 
 .list-messages-container {
   min-height: 90%;
-  max-height: 90%;
   height: auto;
   overflow: auto;
   width: 100%;

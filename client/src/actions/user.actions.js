@@ -4,8 +4,8 @@ export const GET_USER = "GET_USER";
 export const FOLLOW_USER = "FOLLOW_USER";
 export const UNFOLLOW_USER = "UNFOLLOW_USER";
 export const UPDATE_USER = "UPDATE_USER";
-export const UPLOAD_PICTURE_PROFIL = "UPLOAD_PICTURE_PROFIL";
-export const UPLOAD_PICTURE_COVER = "UPLOAD_PICTURE_COVER";
+export const UPLOAD_PROFILE_PICTURE = "UPLOAD_PROFILE_PICTURE";
+export const UPLOAD_COVER_PICTURE = "UPLOAD_COVER_PICTURE";
 
 export const GET_USER_ERRORS = "GET_USER_ERRORS";
 
@@ -62,7 +62,7 @@ export const updateUser = (userId, bio, tweetName) => {
   };
 };
 
-export const uploadPictureProfil = (data, id) => {
+export const uploadProfilePicture = (data, id) => {
   return (dispatch) => {
     return axios
       .post(`${process.env.REACT_APP_API_URL}/api/user/uploadProfil`, data)
@@ -75,7 +75,7 @@ export const uploadPictureProfil = (data, id) => {
             .get(`${process.env.REACT_APP_API_URL}/api/user/${id}`)
             .then((res) => {
               dispatch({
-                type: UPLOAD_PICTURE_PROFIL,
+                type: UPLOAD_PROFILE_PICTURE,
                 payload: res.data.profilePicture,
               });
             });
@@ -85,7 +85,7 @@ export const uploadPictureProfil = (data, id) => {
   };
 };
 
-export const uploadPictureCover = (data, id) => {
+export const uploadCoverPicture = (data, id) => {
   return (dispatch) => {
     return axios
       .post(`${process.env.REACT_APP_API_URL}/api/user/uploadCover`, data)
@@ -98,7 +98,7 @@ export const uploadPictureCover = (data, id) => {
             .get(`${process.env.REACT_APP_API_URL}/api/user/${id}`)
             .then((res) => {
               dispatch({
-                type: UPLOAD_PICTURE_COVER,
+                type: UPLOAD_COVER_PICTURE,
                 payload: res.data.coverPicture,
               });
             });

@@ -123,22 +123,22 @@
   color: gray;
 }
 
-/* CHAT */
+/* CONVERSATION */
 
-.svg-number-container-chat:hover .svg-container {
+.svg-number-container-conversation:hover .svg-container {
   background-color: rgba(70, 142, 73, 0.105);
   transition: 200ms;
 }
 
-.svg-number-container-chat:hover .svg-in-post {
+.svg-number-container-conversation:hover .svg-in-post {
   color: rgba(70, 142, 73);
 }
 
-.svg-number-container-chat:hover .number-whith-svg {
+.svg-number-container-conversation:hover .number-whith-svg {
   color: rgba(70, 142, 73);
 }
 
-/* CHAT */
+/* CONVERSATION */
 
 /* RETWEET */
 

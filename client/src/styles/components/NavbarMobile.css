@@ -1,14 +1,14 @@
-.navbar-mobile-container {
+/* .navbar-mobile-container {
   display: none;
 }
 
 .button-navbar-mobile {
   display: none;
-}
+} */
 
 @media screen and (max-width: 485px) {
   .navbar-mobile-container {
-    z-index: 1000;
+    z-index: 3000;
     height: 70px;
     width: 100%;
     padding: 0 2px;

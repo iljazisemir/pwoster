@@ -4,8 +4,8 @@ export const GET_POSTS = "GET_POSTS";
 export const CREATE_POST = "CREATE_POST";
 export const LIKE_POST = "LIKE_POST";
 export const UNLIKE_POST = "UNLIKE_POST";
-export const RETWEET_POST = "RETWEET_POST";
-export const UNRETWEET_POST = "UNRETWEET_POST";
+export const REPWOST_POST = "REPWOST_POST";
+export const UNREPWOST_POST = "UNREPWOST_POST";
 export const DELETE_POST = "DELETE_POST";
 export const EDIT_POST = "EDIT_POST";
 
@@ -23,7 +23,6 @@ export const getPosts = (num) => {
       .then((res) => {
         const array = res.data.slice(0, num);
         dispatch({ type: GET_POSTS, payload: array });
-        // dispatch({ type: GET_ALL_POSTS, payload: res.data });
       })
       .catch((err) => console.log(err));
   };
@@ -71,7 +70,7 @@ export const unlikePost = (postId, uid) => {
   };
 };
 
-export const retweetPost = (postId, uid) => {
+export const repwostPost = (postId, uid) => {
   return (dispatch) => {
     return axios({
       method: "patch",
@@ -79,13 +78,13 @@ export const retweetPost = (postId, uid) => {
       data: { id: uid },
     })
       .then((res) => {
-        dispatch({ type: RETWEET_POST, payload: { postId, uid } });
+        dispatch({ type: REPWOST_POST, payload: { postId, uid } });
       })
       .catch((err) => console.log(err));
   };
 };
 
-export const unretweetPost = (postId, uid) => {
+export const unrepwostPost = (postId, uid) => {
   return (dispatch) => {
     return axios({
       method: "patch",
@@ -93,7 +92,7 @@ export const unretweetPost = (postId, uid) => {
       data: { id: uid },
     })
       .then((res) => {
-        dispatch({ type: UNRETWEET_POST, payload: { postId, uid } });
+        dispatch({ type: UNREPWOST_POST, payload: { postId, uid } });
       })
       .catch((err) => console.log(err));
   };
