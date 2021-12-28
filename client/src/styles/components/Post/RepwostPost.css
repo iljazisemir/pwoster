@@ -1,0 +1,67 @@
+.popup-create-post {
+  z-index: 1000;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translateX(5%);
+}
+
+.popup-container-retweet {
+  width: 350px;
+  height: min-content;
+  border-radius: 20px;
+  background: white;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px,
+    rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.quote-tweet {
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.span-post {
+  margin: 10px;
+}
+
+.retweet-post {
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.quote-tweet:hover,
+.retweet-post:hover {
+  filter: brightness(97%);
+}
+
+.retweeted-post {
+  width: 15px;
+  height: 15px;
+  color: rgba(55, 191, 98);
+}
