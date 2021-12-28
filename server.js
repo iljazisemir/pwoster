@@ -37,6 +37,45 @@ app.use("/api/user", userRoutes);
 app.use("/api/post", postRoutes);
 app.use("/api/message", messageRoutes);
 
+const path = require("path");
+
+require("dotenv").config({
+  path: path.resolve(process.cwd(), "client", ".env.development"),
+  debug: true,
+});
+
+if (process.env.NODE_ENV == "production") {
+  app.use(express.static("client/build"));
+
+  app.get("/", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+
+  app.get("/login", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+
+  app.get("/profil/:pseudo", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+
+  app.get("/status/:postId", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+
+  app.get("/suggestions", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+
+  app.get("/messages", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+
+  app.get("/messages/:idMessage", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
+
 // server
 const PORT = process.env.PORT;
 
@@ -44,5 +83,5 @@ app.listen(PORT || 3001, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
-// var distDir = __dirname + "/dist/";
-//  app.use(express.static(distDir));
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));

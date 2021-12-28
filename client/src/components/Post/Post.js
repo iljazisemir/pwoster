@@ -15,7 +15,7 @@ import CreateComment from "./CreateComment";
 import LikePost from "./LikePost";
 import PopupEditContainer from "./PopupEditContainer";
 import QuoteTweet from "./QuoteTweet";
-import RetweetPost from "./RetweetPost";
+import RepwostPost from "./RepwostPost";
 
 const Post = ({ postId, ...props }) => {
   const uid = useContext(UidContext);
@@ -182,7 +182,7 @@ const Post = ({ postId, ...props }) => {
           </div>
           <div className="svg-number-container svg-number-container-retweet">
             <div className="svg-container">
-              <RetweetPost
+              <RepwostPost
                 className="svg-in-post"
                 post={post}
                 userPost={userPost}

@@ -10,8 +10,8 @@ router.put("/:id", uploadPost.single("file"), postController.updatePost);
 router.delete("/:id", postController.deletePost);
 router.patch("/like/:id", postController.likePost);
 router.patch("/unlike/:id", postController.unlikePost);
-router.patch("/retweet/:id", postController.retweetPost);
-router.patch("/unretweet/:id", postController.unretweetPost);
+router.patch("/retweet/:id", postController.repwostPost);
+router.patch("/unretweet/:id", postController.unrepwostPost);
 
 // comments
 router.patch("/comment-post/:id", postController.commentPost);

@@ -3,8 +3,8 @@ import {
   GET_USER,
   UNFOLLOW_USER,
   UPDATE_USER,
-  UPLOAD_PICTURE_COVER,
-  UPLOAD_PICTURE_PROFIL,
+  UPLOAD_COVER_PICTURE,
+  UPLOAD_PROFILE_PICTURE,
 } from "../actions/user.actions";
 
 const initialState = {};
@@ -31,12 +31,12 @@ export default function userReducer(state = initialState, action) {
         bio: action.payload.bio,
         tweetName: action.payload.tweetName,
       };
-    case UPLOAD_PICTURE_PROFIL:
+    case UPLOAD_PROFILE_PICTURE:
       return {
         ...state,
         profilePicture: action.payload,
       };
-    case UPLOAD_PICTURE_COVER:
+    case UPLOAD_COVER_PICTURE:
       return {
         ...state,
         coverPicture: action.payload,

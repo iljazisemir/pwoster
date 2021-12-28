@@ -20,7 +20,7 @@
 }
 
 .container-picture-post-quote {
-  width: 100%;
+  width: 90%;
   max-height: 280px;
   object-fit: cover;
   display: flex;
@@ -31,13 +31,11 @@
 
 .container-quote {
   overflow: hidden;
+  width: 100%;
 }
-
 
 @media screen and (max-width: 670px) {
-
 }
 
-@media screen and (max-width: 540px) {
-
+@media screen and (max-width: 485px) {
 }

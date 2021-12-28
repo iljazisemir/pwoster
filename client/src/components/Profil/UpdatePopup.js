@@ -3,8 +3,8 @@ import "../../styles/components/Profil/UpdatePopup.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
   updateUser,
-  uploadPictureCover,
-  uploadPictureProfil,
+  uploadCoverPicture,
+  uploadProfilePicture,
 } from "../../actions/user.actions";
 import Button from "../Button";
 
@@ -32,18 +32,9 @@ const UpdatePopup = ({ popupUpdate, setPopupUpdate }) => {
     dataCover.append("fileCover", fileCover);
 
     dispatch(updateUser(userData._id, bio, tweetName));
-    dispatch(uploadPictureProfil(dataProfil, userData._id));
-    dispatch(uploadPictureCover(dataCover, userData._id));
+    dispatch(uploadProfilePicture(dataProfil, userData._id));
+    dispatch(uploadCoverPicture(dataCover, userData._id));
     setPopupUpdate(false);
-
-    //   if (!error) {
-    //     dispatch(updateUser(userData._id, bio, tweetName));
-    //     dispatch(uploadPictureProfil(dataProfil, userData._id));
-    //     dispatch(uploadPictureCover(dataCover, userData._id));
-    //     setPopupUpdate(false);
-    //   } else if (error) {
-    //     console.log(error);
-    //   }
   };
 
   return (
